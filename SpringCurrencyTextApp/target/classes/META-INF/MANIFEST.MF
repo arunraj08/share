@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringCurrencyTextApp
+Implementation-Version: 1.00
+Built-By: asingaram
+Implementation-Vendor-Id: com.spring.currencytext
+Build-Jdk: 1.8.0_77
+Implementation-URL: http://projects.spring.io/spring-boot/SpringCurren
+ cyTextApp/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
