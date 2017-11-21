@@ -44,4 +44,6 @@ Application Detail:
    
    executable : C:\Program Files\Java\jdk1.8.0_77\bin\javac
    
-     
+  E2E Test Case Execution:
+  --------------------------
+  https://github.com/arunraj08/share/blob/master/SpringCurrencyTextApp/ux-e2e-test/Read-Me.txt
