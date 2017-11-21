@@ -1,0 +1,22 @@
+
+Proctor Set-up
+------------------
+
+Configure the Proctor in local environment for e2e test case execution:
+
+  - npm install -g protractor
+  - protractor --version
+  - webdriver-manager update
+  - webdriver-manager start
+
+Test Execution
+------------------
+  
+ - Download the script and navigate to the folder
+
+ - Execute the protractor command to initiate the integration test.
+
+   protractor ajax-conf.js
+   
+   Ex: C:\Tech\E2ETest\checkamount>protractor ajax-conf.js
+   
