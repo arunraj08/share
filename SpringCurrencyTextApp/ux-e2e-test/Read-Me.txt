@@ -1,5 +1,5 @@
 
-Proctor Set-up
+Protractor Set-up
 ------------------
 
 Configure the Proctor in local environment for e2e test case execution:
