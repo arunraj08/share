@@ -17,11 +17,9 @@ module.exports = function(config) {
     files: [
 		'lib/angular.min.js',
 		'lib/angular-mocks.js',
-		
-		'app/currencyApp.js',
-		'app/CurrencyService.js',
-		
-		'app/*.js',
+		'../src/main/resources/static/js/app/currencyApp.js',		
+		'../src/main/resources/static/js/app/CurrencyCtrl.js',
+		'../src/main/resources/static/js/app/CurrencyService.js',
 		'tests/*.js'
 	],
 
