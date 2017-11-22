@@ -1,0 +1,14 @@
+
+Installation:
+____________________
+
+1) Install the node package in local machine
+
+2) Test case execution
+   
+   Navigate to the directory and execute the npm test command.
+   
+   Ex: C:\Tech\Git\checkwriter\SpringCurrencyTextApp\ux-unit-test > npm test
+   
+   
+   
