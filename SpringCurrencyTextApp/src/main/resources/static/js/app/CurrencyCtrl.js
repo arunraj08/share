@@ -29,41 +29,40 @@ currTextApp.controller('CurrencyCtrl',['CurrencyService', '$scope',  function(Cu
         } 
 	  
 	  function getTextValueForAmount(amt) {          
-		  console.log('Controller - At Converting Amount');          
+		  console.log('Controller - At Converting Amount');                
           CurrencyService.getCurrencyText(amt)          
-              .then(
-                  function (response) {
-                      console.log('Text Retrieved successfully');
-                      self.successMessage = 'Text Retrieved successfully';
-                      self.errorMessage='';
-                      self.convertedAmount=response.result;
-                      self.done = true;                      
-                  },
-                  function (errResponse) {
-                      console.error('Error while retrieving Amount', errResponse);                      
-                      self.errorMessage = errResponse.data.msg;
-                      self.successMessage='';
-                  }
-              );
+          .then(function (response) {
+                  console.log('Text Retrieved successfully');
+                  self.successMessage = 'Text Retrieved successfully';
+                  self.errorMessage='';
+                  self.convertedAmount=response.result;
+                  self.done = true;                      
+              })
+              .catch(function (errResponse) {
+                  console.error('Error while retrieving Amount', errResponse);                      
+                  //self.errorMessage = errResponse.data.msg;
+                  self.errorMessage = errResponse.msg;
+                  self.successMessage='';
+              });
       }
 	  
 	  function getTextValueForbigIntAmount(amt) {          
 		  console.log('Controller - At Converting Amount');          
-          CurrencyService.getCurrencybigIntText(amt)          
-              .then(
-                  function (response) {
-                      console.log('Text Retrieved successfully');
-                      self.successMessage = 'Text Retrieved successfully';
-                      self.errorMessage='';
-                      self.convertedAmount=response.result;
-                      self.done = true;                      
-                  },
-                  function (errResponse) {
-                      console.error('Error while retrieving Amount', errResponse);                      
-                      self.errorMessage = errResponse.data.msg;
-                      self.successMessage='';
-                  }
-              );
+          
+		  CurrencyService.getCurrencybigIntText(amt)          
+          .then(
+              function (response) {
+                  console.log('Text Retrieved successfully');
+                  self.successMessage = 'Text Retrieved successfully';
+                  self.errorMessage='';
+                  self.convertedAmount=response.result;
+                  self.done = true;                      
+              }).
+              catch(function (errResponse) {
+                  console.error('Error while retrieving Amount', errResponse);                      
+                  self.errorMessage = errResponse.msg;
+                  self.successMessage='';
+              });        
       }
 
 }]);

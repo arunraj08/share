@@ -17,7 +17,7 @@ currTextApp.factory('CurrencyService',
 	                var search = {}
 	        	    search["amount"] = amt;
 	                
-	                var deferred = $q.defer();
+	                var deferred = $q.defer();	               
 	                
 	                $http({
 	                    method : "POST",
@@ -25,7 +25,7 @@ currTextApp.factory('CurrencyService',
 	             	    data: JSON.stringify(search),
 	             	    dataType: 'json',        
 	             	    url: "/getAjaxCurrTxt",
-	                }).then(function mySuccess(response) {
+	                }).then(function onSuccess(response) {
 	                    
 	                	console.log("SUCCESS : response", response);	                	
 	    	        	console.log("SUCCESS : Result", response.data.result);
@@ -33,9 +33,9 @@ currTextApp.factory('CurrencyService',
 	    	        	
 	    	        	deferred.resolve(response.data);
 	    	           
-	                }, function myError(errResponse) {
-	                   
-	    	        	deferred.reject(errResponse);
+	                }).catch(function onError(response) {	
+	                	console.log("ERROR : response", response);
+	    	        	deferred.reject(response.data);
 	    	           
 	                });
 	             
@@ -49,7 +49,7 @@ currTextApp.factory('CurrencyService',
 	                var search = {}
 	        	    search["amount"] = amt;
 	                
-	                var deferred = $q.defer();
+	                var deferred = $q.defer();	                
 	                
 	                $http({
 	                    method : "POST",
@@ -57,7 +57,7 @@ currTextApp.factory('CurrencyService',
 	             	    data: JSON.stringify(search),
 	             	    dataType: 'json',        
 	             	    url: "/getBIAjaxCurrTxt",
-	                }).then(function mySuccess(response) {
+	                }).then(function onSuccess(response) {
 	                    
 	                	console.log("SUCCESS : response", response);	                	
 	    	        	console.log("SUCCESS : Result", response.data.result);
@@ -65,9 +65,9 @@ currTextApp.factory('CurrencyService',
 	    	        	
 	    	        	deferred.resolve(response.data);
 	    	           
-	                }, function myError(errResponse) {
-	                   
-	    	        	deferred.reject(errResponse);
+	                }).catch(function onError(response) {	
+	                	console.log("ERROR : response", response);
+	    	        	deferred.reject(response.data);
 	    	           
 	                });
 	             
