@@ -43,7 +43,7 @@ describe('check amount currency convertor', function() {
    input.sendKeys('10000000000011111');
    submit.click();
    input.clear();
-   expect((error).getText()).toContain('Error');   
+   expect((error).getText()).toContain('Error'); 
    
   });
   
